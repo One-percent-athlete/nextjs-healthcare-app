@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { cn } from "@/lib/utils"
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -36,6 +37,13 @@ export default function RootLayout({
       <body
         className={cn("min-h-screen bg-dark-300 font-sans antialiased", fontSans.variable)}
       >
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+          >
+            {children}
+          </ThemeProvider>
+
         {children}
       </body>
     </html>
