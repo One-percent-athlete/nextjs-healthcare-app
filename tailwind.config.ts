@@ -13,7 +13,7 @@ const config = {
   prefix: "",
   theme: {
   	container: {
-  		center: 'true',
+  		center: true,
   		padding: '2rem',
   		screens: {
   			'2xl': '1400px'
@@ -90,9 +90,9 @@ const config = {
   			sans: ["var(--font-sans)", ...fontFamily.sans]
   		},
   		backgroundImage: {
-  			appointments: 'url('/assets/images/appointments-bg.png')',
-  			pending: 'url('/assets/images/pending-bg.png')',
-  			cancelled: 'url('/assets/images/cancelled-bg.png')'
+  			appointments: "url('/assets/images/appointments-bg.png')",
+  			pending: "url('/assets/images/pending-bg.png')",
+  			cancelled: "url('/assets/images/cancelled-bg.png')"
   		},
   		keyframes: {
   			'accordion-down': {
