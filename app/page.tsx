@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
 import PacientForm from "@/components/forms/PacientForm";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,6 +11,12 @@ export default function Home() {
           <Image src="/assets/icons/logo-full.svg" alt="logo" height={1000} width={1000} className="mb-12 h-10 w-fit"/>
 
           <PacientForm />
+
+          <div className="text-14-regular mt-20 flex justify-between">
+            <p className="justify-items-end text-dark-600 xl:text-left">⦿ 2024 Next-care
+            </p>
+            <Link href={}>Admin</Link>
+          </div>
         </div>
       </section>
     </div>
