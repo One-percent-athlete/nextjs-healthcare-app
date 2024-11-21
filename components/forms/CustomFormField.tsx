@@ -29,9 +29,18 @@ interface CustomProps {
 
 }
 
+const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
+    return (
+        <Input 
+            type="text"
+            placeholder="Jonh Wick"
+        />
+    )
+}
 
-const CustomFormField = ({ control, fieldType, name, label  } : CustomProps) => {
-  return (
+const CustomFormField = (props : CustomProps) => {
+    const { control, fieldType, name, label  } = props
+    return (
         <FormField
             control={control}
             name={name}
@@ -39,7 +48,8 @@ const CustomFormField = ({ control, fieldType, name, label  } : CustomProps) => 
                 <FormItem className="flex-1">
                     { fieldType !== FormFieldType.CHECKBOX && label && (
                         <FormLabel>{label}</FormLabel>
-                    ) }
+                    )}
+                    <RenderField field={field} props={props} />
                 </FormItem>
             )}
         />
